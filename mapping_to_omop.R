@@ -1,9 +1,5 @@
 
 
-# REMARKS ----------------------------------------------------------------
-# Still some omop variables missing in certain table (concept_id, value_as_number, ...)
-
-
 library(arrow)
 library(dplyr)
 library(data.table)

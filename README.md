@@ -30,3 +30,54 @@ An example from the mapping table:
 |-------------|-------------------|-----------|-----------------------|----------------------------------------------------------------|----------|----------------------|--------------------------------------------------------------|----------------------|-------------------|
 | J11.1       | ICD10            | 692609    | ICD10 code            | Influenza with other respiratory manifestations, virus not identified | valid    | 10685111000119102    | Upper respiratory tract infection caused by Influenza virus | SNOMED              | cdm_v5_20240830  |
 
+# Technical Details of the Secure Research Environment (SRE)
+
+Intego-II data is accessed through a **Secure Research Environment (SRE)** managed by [Healthdata.be](https://www.healthdata.be), ensuring compliance with Belgian and international privacy and security standards. Below are the key technical aspects for researchers:
+
+---
+
+## 1. Access and Platform
+- Access is provided via **Citrix Workspace** with **mandatory two-factor authentication (2FA)**.
+- The environment currently operates on an **on-premise Windows-based infrastructure**.
+- **Upcoming update:** Migration to **Microsoft Azure Virtual Desktop** for improved scalability, security, and compliance.
+
+---
+
+## 2. Security and Governance
+- Managed by **Healthdata.be**, under the governance of **eHealth** and **Sciensano**.
+- Research activities occur in a **controlled, internet-disabled environment**.
+- All sessions and actions are logged for **audit and compliance**.
+- Data governance and security measures are approved by the **Belgian Information Security Committee (Social Security and Health Chamber)**.
+- **CareConnect**, the EMR software used in data collection, is validated by **Corilus**.
+
+---
+
+## 3. Available Software
+- **Data Analysis:**  
+  - **R** (with commonly used packages)  
+  - **Python** (via Anaconda distribution)  
+- **Documentation:**  
+  - **LibreOffice**  
+- Additional software can be installed upon request and approval.
+
+---
+
+## 4. Data Storage and Structure
+- **Source data**: Delivered as `.csv` text files.  
+- **Processed data**: Stored as `.parquet` files for efficient and reproducible research workflows.  
+- Each quarterly release is stored in a **versioned directory structure** to ensure full traceability.
+
+---
+
+## 5. Data Egress (Export) Policy
+- Only **aggregated results** may be exported—**no individual-level data** is allowed.
+- Export requests are submitted through the **Intego data manager** for review.
+- Datasets are validated against **Healthdata.be’s export principles** before approval.
+- Approved exports include a **metadata file** for documentation and audit purposes.
+- Final delivery to the researcher occurs after approval by **Healthdata.be**.
+- All exports are logged in a **secure audit trail**.
+
+---
+
+### More Information
+For updates, user guides, and detailed documentation, please refer to this repository regularly.

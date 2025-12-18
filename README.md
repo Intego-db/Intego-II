@@ -1,5 +1,5 @@
 # Intego-II
-This repository serves as a companion to the Intego-II primary care database, providing essential resources to facilitate research and data standardization.
+This repository serves as a companion to the Intego-II primary care database, providing essential resources to facilitate research and data standardization. A detailed description of the database is published in the International Journal of Epidemiology: https://doi.org/10.1093/ije/dyaf200.
 
 ## Repository Contents
 * Code Glossary: A mapping table between Intego-II source codes and standard codes as defined in the OMOP CDM.

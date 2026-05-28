@@ -114,7 +114,7 @@ drug_exposure_atc <- merge(
 # CNK to ATC
 drug_exposure_cnk <- merge(
   drug_exposure_cnk,
-  intego_code_glossary[source_vocabulary == "CNK"][,.(source_code,standard_code)][!is.na(standard_code)],
+  unique(intego_code_glossary[source_vocabulary == "CNK"][,.(source_code,standard_code)][!is.na(standard_code)]),
   # all.x=T,
   by.x = "drug_source_value", by.y = "source_code"
 )
